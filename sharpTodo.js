@@ -65,3 +65,34 @@ function filterItems(e){
     }
    });
 }
+
+
+// store input value in local storage 
+form.addEventListener("click", storeInput);
+function storeInput(e){
+e.preventDefault();    
+var item = document.getElementById("item").value;
+localStorage.setItem('show', `${item}`);
+}
+
+
+
+
+
+// window.onload = function() {
+
+//     // Check for LocalStorage support.
+//     if (localStorage) {
+  
+//       // Add an event listener for form submissions
+//       document.getElementById('addForm').addEventListener('submit', function() {
+//         // Get the value of the name field.
+//         var name = document.getElementById('item').value;
+  
+//         // Save the name in localStorage.
+//         localStorage.setItem('name', name);
+//       });
+  
+//     }
+  
+//   }
